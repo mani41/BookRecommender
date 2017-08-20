@@ -12,6 +12,12 @@ public class BookModel {
     public BookModel() {
     }
 
+    public BookModel(String title, String isbn, String imageTag) {
+        this.title = title;
+        this.isbn = isbn;
+        this.imageTag = imageTag;
+    }
+
     public String getTitle() {
         return title;
     }

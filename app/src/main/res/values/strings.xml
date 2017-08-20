@@ -19,4 +19,10 @@
     <string name="title_messages">Messages</string>
     <string name="title_friends">Friends</string>
     <string name="title_home">Home</string>
+    <string name="title_activity_map">MapActivity</string>
+
+    <string name="lbl_you_are_at">YOU ARE AT</string>
+    <string name="btn_get_location">GET MY LOCATION</string>
+    <string name="btn_start_location_updates">START LOCATION UPDATES</string>
+    <string name="btn_stop_location_updates">STOP LOCATION UPDATES</string>
 </resources>

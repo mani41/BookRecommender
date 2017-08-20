@@ -1,0 +1,402 @@
+[
+  {
+    "deviceId": "5997cae543a6c048fd146f1c",
+    "userName": "Alta Patrick",
+    "phoneNumber": "(943) 490-2797",
+    "latitude": 12.94,
+    "longitude": 77.6499,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Lila",
+        "imageTag": "4674b2f9-398b-4336-9d15-3c28fd0f76a3"
+      },
+      {
+        "isbn": 1,
+        "title": "Sue",
+        "imageTag": "f6b74d09-f675-431c-9f38-dc21880424d1"
+      },
+      {
+        "isbn": 2,
+        "title": "Gilmore",
+        "imageTag": "1074b353-fde8-4218-854c-d1bbab4ca81f"
+      },
+      {
+        "isbn": 3,
+        "title": "Martha",
+        "imageTag": "648d931d-336e-41fe-b9dc-626c229ad4ca"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Berger",
+        "imageTag": "c7defcdb-caf4-4b82-ac34-62c7c1880c10"
+      }
+    ]
+  },
+  {
+    "deviceId": "5997cae545fe44b5bb679e1d",
+    "userName": "Wallace Hart",
+    "phoneNumber": "(933) 500-2322",
+    "latitude": 12.91,
+    "longitude": 77.8287,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Floyd",
+        "imageTag": "1322dabc-7310-4989-b965-376658911ac4"
+      },
+      {
+        "isbn": 1,
+        "title": "Mari",
+        "imageTag": "2028cdca-9a40-4150-ad06-f928fa2a7f06"
+      },
+      {
+        "isbn": 2,
+        "title": "Pugh",
+        "imageTag": "da2b9a6d-ba3f-45a7-b631-a389b473b322"
+      },
+      {
+        "isbn": 3,
+        "title": "Amy",
+        "imageTag": "4918c4c1-118c-4238-bde3-184544681282"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Lourdes",
+        "imageTag": "50a5ec38-0f2f-4b1b-a45f-15c2d5ad3b32"
+      },
+      {
+        "isbn": 1,
+        "title": "Alvarez",
+        "imageTag": "1a71c9cb-0e56-4ffe-bcc2-e0b305303026"
+      },
+      {
+        "isbn": 2,
+        "title": "Aimee",
+        "imageTag": "2bf23c2d-2a64-435e-a62a-5edbc8ebf68d"
+      },
+      {
+        "isbn": 3,
+        "title": "Ryan",
+        "imageTag": "048cccb3-4301-4c48-ae6d-e7201be5f71a"
+      },
+      {
+        "isbn": 4,
+        "title": "Gutierrez",
+        "imageTag": "70bd3661-e46c-490e-9c09-5e556c9d666f"
+      }
+    ]
+  },
+  {
+    "deviceId": "5997cae5d7e9d76bc2e48369",
+    "userName": "Valencia Knight",
+    "phoneNumber": "(818) 543-2758",
+    "latitude": 13.05,
+    "longitude": 77.5882,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Reed",
+        "imageTag": "43ff006d-0e5d-464c-b815-44d03dba1c5e"
+      },
+      {
+        "isbn": 1,
+        "title": "Bernice",
+        "imageTag": "a5c36565-4b8b-4a44-a150-46d5efd30f3f"
+      },
+      {
+        "isbn": 2,
+        "title": "Bishop",
+        "imageTag": "135161f2-325d-4d19-af75-4af70034645d"
+      },
+      {
+        "isbn": 3,
+        "title": "Stephens",
+        "imageTag": "a23f7eeb-c515-4942-ba78-ee584d767a23"
+      },
+      {
+        "isbn": 4,
+        "title": "Wilma",
+        "imageTag": "eff95e71-957d-406c-af98-3d6b3e704124"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Maura",
+        "imageTag": "8dc0ddaf-c9a2-435c-98ba-92ad3c3d23bf"
+      }
+    ]
+  },
+  {
+    "deviceId": "5997cae5878dd4c203d6ef43",
+    "userName": "Kathie Branch",
+    "phoneNumber": "(842) 510-2670",
+    "latitude": 12.87,
+    "longitude": 77.616,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Estes",
+        "imageTag": "c8c0559e-633a-41c3-ade3-adf1667620ad"
+      },
+      {
+        "isbn": 1,
+        "title": "Conway",
+        "imageTag": "6a9f87fb-548c-48d9-a6d7-12ee028cc301"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Owen",
+        "imageTag": "46bb35e9-c390-493c-be24-62bf2a28d97b"
+      },
+      {
+        "isbn": 1,
+        "title": "Greer",
+        "imageTag": "cb005fab-bcbd-435c-b96b-e7fab26bd93f"
+      },
+      {
+        "isbn": 2,
+        "title": "Penny",
+        "imageTag": "c6748a65-b929-44df-87aa-3e7502e4c1a0"
+      }
+    ]
+  },
+  {
+    "deviceId": "5997cae594c9dec10061e8f9",
+    "userName": "Christine Harris",
+    "phoneNumber": "(984) 427-3894",
+    "latitude": 12.99,
+    "longitude": 77.4609,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Isabelle",
+        "imageTag": "86bba6a0-5f9e-4957-9586-c891bf9c44dd"
+      },
+      {
+        "isbn": 1,
+        "title": "Nona",
+        "imageTag": "eaacc9a6-f81b-4b80-a76a-76c7dca723eb"
+      },
+      {
+        "isbn": 2,
+        "title": "Violet",
+        "imageTag": "0f6a7853-0dda-43dc-9cd6-956061e7863d"
+      },
+      {
+        "isbn": 3,
+        "title": "Kidd",
+        "imageTag": "f1a5da88-09d5-450d-a6a5-e8873f39cdde"
+      },
+      {
+        "isbn": 4,
+        "title": "Singleton",
+        "imageTag": "24208bb6-4d0b-494c-a02d-45f16d5c1672"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Geneva",
+        "imageTag": "7ea06ba7-c51d-4394-a7c9-4d9709257488"
+      }
+    ]
+  },
+  {
+    "deviceId": "5997cae505c8a87569777362",
+    "userName": "Garcia Guy",
+    "phoneNumber": "(891) 433-2845",
+    "latitude": 12.92,
+    "longitude": 77.1609,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Harrison",
+        "imageTag": "beb528f1-e9e5-4725-a6e6-d0734b2ae688"
+      },
+      {
+        "isbn": 1,
+        "title": "Amparo",
+        "imageTag": "6832a7b8-48c7-4114-bfdd-759fd0067e03"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Fern",
+        "imageTag": "31a3f2b9-424a-4a43-99c4-26135ae979d9"
+      },
+      {
+        "isbn": 1,
+        "title": "Avis",
+        "imageTag": "545ef422-3c73-4584-acba-075f201b9756"
+      },
+      {
+        "isbn": 2,
+        "title": "Kerri",
+        "imageTag": "301da040-729a-4000-b7e9-63d722c619d9"
+      }
+    ]
+  },
+  {
+    "deviceId": "5997cae566f52cc5e8dfdbd7",
+    "userName": "Lucile Merrill",
+    "phoneNumber": "(833) 433-3713",
+    "latitude": 12.76,
+    "longitude": 77.8204,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Sherman",
+        "imageTag": "b35252e0-1ec7-4588-ac4a-9053bbecb1b1"
+      },
+      {
+        "isbn": 1,
+        "title": "Margarita",
+        "imageTag": "dac45704-22b9-4237-b946-970c9ff3b4c8"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Shannon",
+        "imageTag": "67e01b4e-8094-43e5-9c77-8be146bf4088"
+      },
+      {
+        "isbn": 1,
+        "title": "Trisha",
+        "imageTag": "b521002b-da2a-4a6e-8822-66aa0a53d57b"
+      }
+    ]
+  },
+  {
+    "deviceId": "5997cae5cb6474ba5f36305a",
+    "userName": "Hughes Ramsey",
+    "phoneNumber": "(825) 511-2169",
+    "latitude": 12.84,
+    "longitude": 77.3723,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Hernandez",
+        "imageTag": "2cbb885e-fd08-4a96-b378-9a2b17e419bf"
+      },
+      {
+        "isbn": 1,
+        "title": "Goodwin",
+        "imageTag": "e9b34459-6268-4c80-a4e7-6e50908c7dc2"
+      },
+      {
+        "isbn": 2,
+        "title": "Crosby",
+        "imageTag": "b8c2cadf-1fc5-46fc-a001-43ae881c0dac"
+      },
+      {
+        "isbn": 3,
+        "title": "Cecilia",
+        "imageTag": "0bfec000-f411-4f21-9fd0-a817aab712cb"
+      },
+      {
+        "isbn": 4,
+        "title": "Clarissa",
+        "imageTag": "3d738766-eacf-4e58-8663-cb3d9d7103ea"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Copeland",
+        "imageTag": "d1479da5-4820-4e85-98a2-9bf46bb42403"
+      },
+      {
+        "isbn": 1,
+        "title": "Silva",
+        "imageTag": "f55f85bc-89b8-4b4f-b462-77e3c77753ae"
+      },
+      {
+        "isbn": 2,
+        "title": "Curry",
+        "imageTag": "36a7ecd5-3d85-4e60-a904-102c07b3536b"
+      }
+    ]
+  },
+  {
+    "deviceId": "5997cae50ff12c43563c4943",
+    "userName": "Guerrero Frost",
+    "phoneNumber": "(915) 485-3496",
+    "latitude": 12.83,
+    "longitude": 77.9967,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Ann",
+        "imageTag": "ba13548d-2300-4274-a09f-c7c566021de1"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Shana",
+        "imageTag": "2f863e36-76bf-4a43-9f59-33edd0d98e61"
+      }
+    ]
+  },
+  {
+    "deviceId": "5997cae53b960e29838d4a47",
+    "userName": "Letitia Nieves",
+    "phoneNumber": "(815) 520-3415",
+    "latitude": 12.78,
+    "longitude": 77.9896,
+    "bookOwned": [
+      {
+        "isbn": 0,
+        "title": "Mcfadden",
+        "imageTag": "206b4332-6449-43eb-89db-96e873e5512e"
+      },
+      {
+        "isbn": 1,
+        "title": "Savannah",
+        "imageTag": "ba0962e3-dbc9-496a-9f7f-47843d245ed8"
+      },
+      {
+        "isbn": 2,
+        "title": "Harriett",
+        "imageTag": "419f99df-bd2b-41bc-b571-c5e64e3a518e"
+      },
+      {
+        "isbn": 3,
+        "title": "Simpson",
+        "imageTag": "d5322734-1795-429b-954f-c2a9f42e0b9d"
+      },
+      {
+        "isbn": 4,
+        "title": "Adele",
+        "imageTag": "b86efa68-1a80-4dd2-afdd-ecf42f0ec0ab"
+      }
+    ],
+    "bookRequest": [
+      {
+        "isbn": 0,
+        "title": "Sonja",
+        "imageTag": "d81096b1-adc0-4ac5-8592-b991adafc727"
+      },
+      {
+        "isbn": 1,
+        "title": "Wyatt",
+        "imageTag": "d5e4da96-89e1-4e0a-a02d-9b53d5f75fbb"
+      },
+      {
+        "isbn": 2,
+        "title": "Rose",
+        "imageTag": "d1b5f998-9ede-468a-a437-4a10292b949c"
+      }
+    ]
+  }
+]

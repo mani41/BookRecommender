@@ -1,5 +1,6 @@
 package info.androidhive.materialdesign.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import info.androidhive.materialdesign.R;
+import info.androidhive.materialdesign.controllers.UserController;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
         drawerFragment.setDrawerListener(this);
+        UserController.getInstance().initialize(getApplicationContext());
+
 
         // display the first navigation drawer view on app launch
         displayView(0);

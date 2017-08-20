@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="25dp"
+        android:text="USERNAME"
+        android:textStyle="bold" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_above="@+id/barterButton">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:scrollbars="none">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="380dp"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/lib/com.app.chasebank"
+                                android:id="@+id/profile_image"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_background"
+                                app:civ_border_color="#FF000000"
+                                app:civ_border_width="2dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="USERNAME" />
+                        </LinearLayout>
+
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#c0c0c0" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BOOK ISBN"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:background="#c0c0c0" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:text="BOOK ISBN"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#c0c0c0" />
+
+                    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/mapButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:clickable="true"
+                                android:src="@drawable/ic_small"
+                                app:layout_anchorGravity="bottom|right|end" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bengaluru" />
+                        </LinearLayout>
+                    </android.support.design.widget.CoordinatorLayout>
+
+                    <Button
+                        android:id="@+id/mapButton1"
+                        style="@style/PrimaryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:text="MAP" />
+                </LinearLayout>
+            </FrameLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button style="@style/PrimaryButton"
+            android:id="@+id/barterButton"
+            android:layout_height="50dp"
+            android:text="Barter"
+            android:enabled="true"
+            android:layout_width="fill_parent"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+
+
+
+</FrameLayout>
