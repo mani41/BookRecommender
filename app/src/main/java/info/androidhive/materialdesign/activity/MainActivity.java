@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import info.androidhive.materialdesign.R;
+import info.androidhive.materialdesign.controllers.UserController;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
+//    RecyclerView recyclerView;
+//    RecyclerView.LayoutManager layoutManager;
+//    RecyclerView.Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +39,16 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
         drawerFragment.setDrawerListener(this);
+        UserController.getInstance().initialize(getApplicationContext());
+        UserController.getInstance().matchMake();
 
+//        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+//
+//        layoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(layoutManager);
+//        List<BookUserMapper> listUser = UserController.getInstance().getMatchBookResults();
+//        adapter = new SearchResultAdapter(listUser);
+//        recyclerView.setAdapter(adapter);
         // display the first navigation drawer view on app launch
         displayView(0);
     }

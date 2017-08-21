@@ -1,0 +1,21 @@
+{
+  "deviceId": "5998563285a912ae7fad0e30",
+  "userName": "Marla Parrish",
+  "phoneNumber": "(980) 466-3118",
+  "latitude": 12.93,
+  "longitude": 77.4458,
+  "bookOwned": [
+    {
+      "isbn": 24,
+      "title": "Sophie",
+      "imageTag": "ea1aafaf-974c-497e-84a7-b7a020fd801f"
+    }
+  ],
+  "bookRequest": [
+    {
+      "isbn": 25,
+      "title": "Hinton",
+      "imageTag": "af39c7b7-e1e0-4463-8f69-20fa12e31bb8"
+    }
+  ]
+}

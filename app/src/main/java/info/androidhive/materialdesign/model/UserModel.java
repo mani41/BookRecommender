@@ -8,17 +8,17 @@ import java.util.List;
 
 public class UserModel {
     private String  userName;
-    private long    phoneNumber;
+    private String  phoneNumber;
     private double  latitude;
     private double  longitude;
     private String  deviceId;
     private List<BookModel> bookOwned;
-    private List<BookModel> bookBorrow;
+    private List<BookModel> bookRequest;
 
     public UserModel() {
     }
 
-    public UserModel(String userName, long phoneNumber, double latitude, double longitude, String deviceId) {
+    public UserModel(String userName, String phoneNumber, double latitude, double longitude, String deviceId) {
         this.userName = userName;
         this.phoneNumber = phoneNumber;
         this.latitude = latitude;
@@ -26,14 +26,14 @@ public class UserModel {
         this.deviceId = deviceId;
     }
 
-    public UserModel(String userName, long phoneNumber, double latitude, double longitude, String deviceId, List<BookModel> bookOwned, List<BookModel> bookBorrow) {
+    public UserModel(String userName, String phoneNumber, double latitude, double longitude, String deviceId, List<BookModel> bookOwned, List<BookModel> bookRequest) {
         this.userName = userName;
         this.phoneNumber = phoneNumber;
         this.latitude = latitude;
         this.longitude = longitude;
         this.deviceId = deviceId;
         this.bookOwned = bookOwned;
-        this.bookBorrow = bookBorrow;
+        this.bookRequest = bookRequest;
     }
 
     public String getUserName() {
@@ -44,11 +44,11 @@ public class UserModel {
         this.userName = userName;
     }
 
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -84,11 +84,11 @@ public class UserModel {
         this.bookOwned = bookOwned;
     }
 
-    public List<BookModel> getBookBorrow() {
-        return bookBorrow;
+    public List<BookModel> getbookRequest() {
+        return bookRequest;
     }
 
-    public void setBookBorrow(List<BookModel> bookBorrow) {
-        this.bookBorrow = bookBorrow;
+    public void setbookRequest(List<BookModel> bookRequest) {
+        this.bookRequest = bookRequest;
     }
 }
