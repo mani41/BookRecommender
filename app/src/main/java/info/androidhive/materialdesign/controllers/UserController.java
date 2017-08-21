@@ -18,19 +18,19 @@ import info.androidhive.materialdesign.model.UserModel;
 import info.androidhive.materialdesign.utilities.JSONUtils;
 import info.androidhive.materialdesign.utilities.MapUtils;
 
+
 /**
  * Created by akash on 8/15/17.
  */
 
 public class UserController {
+
     private UserModel user;
     private List<UserModel> userList;
     private List<BookUserMapper> matchBookResults;
     private BookModel bookReq;
     private BookModel bookLend;
     private static UserController instance = null;
-
-
     private UserController(){
 
     }

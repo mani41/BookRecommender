@@ -1,5 +1,6 @@
 package info.androidhive.materialdesign.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -41,14 +42,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         drawerFragment.setDrawerListener(this);
         UserController.getInstance().initialize(getApplicationContext());
         UserController.getInstance().matchMake();
-
-//        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-//
-//        layoutManager = new LinearLayoutManager(this);
-//        recyclerView.setLayoutManager(layoutManager);
-//        List<BookUserMapper> listUser = UserController.getInstance().getMatchBookResults();
-//        adapter = new SearchResultAdapter(listUser);
-//        recyclerView.setAdapter(adapter);
         // display the first navigation drawer view on app launch
         displayView(0);
     }
