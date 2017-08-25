@@ -1,5 +1,6 @@
 package info.androidhive.materialdesign.adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +17,7 @@ import javax.xml.datatype.Duration;
 
 import info.androidhive.materialdesign.R;
 import info.androidhive.materialdesign.activity.MainActivity;
+import info.androidhive.materialdesign.activity.UserInfoActivity;
 import info.androidhive.materialdesign.model.BookUserMapper;
 
 /**
@@ -25,6 +27,7 @@ import info.androidhive.materialdesign.model.BookUserMapper;
 public class SearchResultAdapter extends RecyclerView.Adapter<SearchResultAdapter.ViewHolder> {
     // Provide a suitable constructor (depends on the kind of dataset)
     private List<BookUserMapper> mDataset;
+
     public SearchResultAdapter(List<BookUserMapper> myDataset) {
         mDataset = myDataset;
     }
@@ -68,10 +71,10 @@ public class SearchResultAdapter extends RecyclerView.Adapter<SearchResultAdapte
             cardView.setOnClickListener(new View.OnClickListener(){
 
                 @Override
-                public void onClick(View v) {
-                    System.out.print(getAdapterPosition()+" position");
-                    int adapterpos = getAdapterPosition();
-                    Toast.makeText(v.getContext(),getAdapterPosition()+" position",Toast.LENGTH_LONG);
+                public void onClick(View v) {;
+                    Intent intent = new Intent(v.getContext(), UserInfoActivity.class);
+                    intent.putExtra("cardPosition",getAdapterPosition());
+                    v.getContext().startActivity(intent);
                 }
             });
 
