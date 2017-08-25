@@ -64,7 +64,24 @@ public class UserInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int cardPosition = intent.getIntExtra("cardPosition",0);
         bookUserMapper = UserController.getInstance().getMatchBookResults().get(cardPosition);
+
         TextView setUsername = (TextView)findViewById(R.id.username);
         setUsername.setText(bookUserMapper.getUser().getUserName());
+
+        TextView setBookName = (TextView)findViewById(R.id.bookname);
+        setBookName.setText(bookUserMapper.getBookBorrow().getTitle());
+
+        // need to get author info here
+        TextView setAuthor = (TextView) findViewById(R.id.author);
+        setAuthor.setText(setAuthor.getText().toString() + bookUserMapper.getBookBorrow().getIsbn());
+
+        TextView setExchange = (TextView) findViewById(R.id.exchange);
+        setExchange.setText(bookUserMapper.getBookLend().getTitle());
+
+        TextView setPurchaseDate = (TextView) findViewById(R.id.puchaseyear);
+        setPurchaseDate.setText(bookUserMapper.getUser().getPhoneNumber());
+
+        TextView setGoToMap = (TextView) findViewById(R.id.goToMap);
+        setGoToMap.setText(Double.toString(bookUserMapper.getDistance()) + " km away");
     }
 }
