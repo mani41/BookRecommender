@@ -1,6 +1,11 @@
 package info.androidhive.materialdesign.adapter;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -38,7 +43,7 @@ public class SearchResultAdapter extends RecyclerView.Adapter<SearchResultAdapte
 
     @Override
     public void onBindViewHolder(SearchResultAdapter.ViewHolder holder, int position) {
-        holder.bookImg.setImageResource(R.drawable.notification_template_icon_bg);
+        //holder.bookImg.setImageResource(R.drawable.notification_template_icon_bg);
         holder.bookTitle.setText(mDataset.get(position).getBookBorrow().getTitle());
         holder.distance.setText(mDataset.get(position).getDistance()+" km");
         holder.barterBookTitle.setText(mDataset.get(position).getBookLend().getTitle());
@@ -60,11 +65,14 @@ public class SearchResultAdapter extends RecyclerView.Adapter<SearchResultAdapte
         public CardView  cardView;
         public ViewHolder(View itemView) {
             super(itemView);
-            bookImg = (ImageView)itemView.findViewById(R.id.item_image);
+            //itemView.setBackgroundResource(R.drawable.hp4);
+            //bookImg = (ImageView)itemView.findViewById(R.id.item_image);
             bookTitle = (TextView)itemView.findViewById(R.id.item_title);
             distance = (TextView)itemView.findViewById(R.id.item_distance);
             barterBookTitle = (TextView) itemView.findViewById(R.id.item_barter);
             cardView = (CardView) itemView.findViewById(R.id.card_view);
+            cardView.setBackgroundResource(R.drawable.hp4);
+            cardView.getBackground().setColorFilter(itemView.getContext().getColor(R.color.tint_color), PorterDuff.Mode.MULTIPLY);
             cardView.setOnClickListener(new View.OnClickListener(){
 
                 @Override
