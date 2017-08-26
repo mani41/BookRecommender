@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -47,7 +48,8 @@ public class HomeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
 
-        layoutManager = new LinearLayoutManager(getActivity());
+        //layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager = new GridLayoutManager(getContext(), 2);;
         recyclerView.setLayoutManager(layoutManager);
         List<BookUserMapper> listUser = UserController.getInstance().getMatchBookResults();
         adapter = new SearchResultAdapter(listUser);
