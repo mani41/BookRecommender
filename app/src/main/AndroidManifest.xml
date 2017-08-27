@@ -3,11 +3,13 @@
     package="info.androidhive.materialdesign">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
+
 
     <application
         android:allowBackup="true"
@@ -42,10 +44,19 @@
         <activity
             android:name=".activity.MapActivity"
             android:label="Material Design" />
+
         <activity android:name=".activity.LocationPermission" />
         <activity android:name=".activity.HomeBarter" />
         <activity android:name=".activity.CurrentBookInfo" />
         <activity android:name=".activity.BookRequest"></activity>
+        <activity
+            android:name=".activity.BookInfoActivity"
+            android:label="Material Design" />
     </application>
+
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>

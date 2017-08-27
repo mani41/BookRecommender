@@ -12,7 +12,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="PrimaryButton">primaryButton</style>
+    <style name="PrimaryButton" parent="MyMaterialTheme.Base">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 
     <style name="MyMaterialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

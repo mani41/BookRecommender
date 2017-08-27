@@ -4,20 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_background">
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="25dp"
-        android:text="USERNAME"
-        android:textStyle="bold" />
-
-
-
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -47,7 +33,8 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp">
 
                             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/lib/com.app.chasebank"
                                 android:id="@+id/profile_image"
@@ -57,40 +44,151 @@
                                 app:civ_border_color="#FF000000"
                                 app:civ_border_width="2dp" />
                             <TextView
+                                android:id="@+id/username"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="USERNAME" />
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:gravity="center"
+                                android:text="" />
                         </LinearLayout>
 
 
                     <View
                         android:layout_width="fill_parent"
                         android:layout_height="1dp"
-                        android:background="#c0c0c0" />
+                        android:background="#c0c0c0"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
 
-                    <TextView
-                        android:id="@+id/textView2"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="BOOK ISBN"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_library_books"/>
+                    <TextView
+                        android:id="@+id/bookname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:paddingLeft="10dp"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="2dp"
-                        android:background="#c0c0c0" />
+                </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/author"
                         android:layout_width="wrap_content"
-                        android:layout_height="80dp"
-                        android:text="BOOK ISBN"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                        android:layout_height="wrap_content"
+                        android:text="By "
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
                     <View
                         android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:background="#c0c0c0" />
+                        android:layout_height="0.5dp"
+                        android:background="#c0c0c0"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_info_outline"/>
+                        <TextView
+                            android:id="@+id/info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Some random info about the book, don't know how I will be populated, either from the DB, or poorly hardcoded text, I was even asked to be 'Loren epsum' shit. God help me!"
+                            android:paddingLeft="10dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#c0c0c0"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_repeat"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/exchangetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Exchange"
+                        android:paddingLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                    <TextView
+                        android:id="@+id/exchange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:paddingLeft="5dp"
+                        android:layout_below="@id/exchangetitle"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="40dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_date_range"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/purchasetitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Year"
+                            android:paddingLeft="5dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                        <TextView
+                            android:id="@+id/puchaseyear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:paddingLeft="5dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#c0c0c0"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"/>
 
                     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -106,25 +204,21 @@
                                 android:id="@+id/mapButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="16dp"
+                                android:layout_margin="10dp"
                                 android:clickable="true"
-                                android:src="@drawable/ic_small"
+                                android:src="@drawable/ic_location"
                                 app:layout_anchorGravity="bottom|right|end" />
 
                             <TextView
+                                android:id="@+id/goToMap"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Bengaluru" />
+                                android:layout_marginTop="30dp"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:layout_centerVertical="true"/>
                         </LinearLayout>
                     </android.support.design.widget.CoordinatorLayout>
-
-                    <Button
-                        android:id="@+id/mapButton1"
-                        style="@style/PrimaryButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:enabled="true"
-                        android:text="MAP" />
                 </LinearLayout>
             </FrameLayout>
         </ScrollView>
@@ -139,7 +233,9 @@
         <Button style="@style/PrimaryButton"
             android:id="@+id/barterButton"
             android:layout_height="50dp"
-            android:text="Barter"
+            android:text="BARTER"
+            android:textSize="20dp"
+            android:textScaleX="1.5"
             android:enabled="true"
             android:layout_width="fill_parent"
             android:layout_alignParentLeft="true" />

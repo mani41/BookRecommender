@@ -50,7 +50,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback{
         Button button = (Button) findViewById(R.id.getDirection);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                navigateUsingGoogleMap();
+                //navigateUsingGoogleMap();
+                Intent intent = new Intent(getApplicationContext(),BookInfoActivity.class);
+                startActivity(intent);
             }
         });
 

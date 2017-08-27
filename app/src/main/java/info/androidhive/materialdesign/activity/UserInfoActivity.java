@@ -18,6 +18,7 @@ import java.util.Random;
 
 import info.androidhive.materialdesign.R;
 import info.androidhive.materialdesign.controllers.UserController;
+import info.androidhive.materialdesign.model.BookUserMapper;
 import info.androidhive.materialdesign.model.UserModel;
 import info.androidhive.materialdesign.utilities.GPSTracker;
 
@@ -28,7 +29,7 @@ import info.androidhive.materialdesign.utilities.GPSTracker;
 public class UserInfoActivity extends AppCompatActivity {
 
     View view;
-
+    BookUserMapper bookUserMapper;
     //int rand = new Random().nextInt(getUserList().size());;
 
 
@@ -47,8 +48,8 @@ public class UserInfoActivity extends AppCompatActivity {
                 double curlongitude = gps.getLongitude();
 
                 Intent intent = new Intent(getApplicationContext(), MapActivity.class);
-                //intent.putExtra("latitude",getUserList().get(rand).getLatitude());
-                //intent.putExtra("longitude",getUserList().get(rand).getLongitude());
+                intent.putExtra("latitude",bookUserMapper.getUser().getLatitude());
+                intent.putExtra("longitude",bookUserMapper.getUser().getLongitude());
                 intent.putExtra("curlatitude",curlatitude);
                 intent.putExtra("curlongitude",curlongitude);
 
@@ -60,7 +61,27 @@ public class UserInfoActivity extends AppCompatActivity {
     }
 
     public void populateUser(){
+        Intent intent = getIntent();
+        int cardPosition = intent.getIntExtra("cardPosition",0);
+        bookUserMapper = UserController.getInstance().getMatchBookResults().get(cardPosition);
+
         TextView setUsername = (TextView)findViewById(R.id.username);
-        //setUsername.setText(getUserList().get(rand).getUserName());
+        setUsername.setText(bookUserMapper.getUser().getUserName());
+
+        TextView setBookName = (TextView)findViewById(R.id.bookname);
+        setBookName.setText(bookUserMapper.getBookBorrow().getTitle());
+
+        // need to get author info here
+        TextView setAuthor = (TextView) findViewById(R.id.author);
+        setAuthor.setText(setAuthor.getText().toString() + bookUserMapper.getBookBorrow().getIsbn());
+
+        TextView setExchange = (TextView) findViewById(R.id.exchange);
+        setExchange.setText(bookUserMapper.getBookLend().getTitle());
+
+        TextView setPurchaseDate = (TextView) findViewById(R.id.puchaseyear);
+        setPurchaseDate.setText(bookUserMapper.getUser().getPhoneNumber());
+
+        TextView setGoToMap = (TextView) findViewById(R.id.goToMap);
+        setGoToMap.setText(Double.toString(bookUserMapper.getDistance()) + " km away");
     }
 }
