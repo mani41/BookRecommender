@@ -1,6 +1,8 @@
 package info.androidhive.materialdesign.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +10,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,9 +25,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
-//    RecyclerView recyclerView;
-//    RecyclerView.LayoutManager layoutManager;
-//    RecyclerView.Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
         drawerFragment.setDrawerListener(this);
-        UserController.getInstance().initialize(getApplicationContext());
-        UserController.getInstance().matchMake();
+
         // display the first navigation drawer view on app launch
-        displayView(0);
+        //displayView(0);
+        new FetchUserData().execute();
     }
 
 
@@ -107,6 +107,43 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
             // set the toolbar title
             getSupportActionBar().setTitle(title);
+        }
+    }
+
+    private class FetchUserData extends AsyncTask<String, Void, Boolean> {
+
+        private ProgressDialog dialog = new ProgressDialog(MainActivity.this);
+
+        /** progress dialog to show user that the backup is processing. */
+        /** application context. */
+        @Override
+        protected void onPreExecute() {
+            this.dialog.setMessage("Please wait");
+            this.dialog.show();
+        }
+
+        @Override
+        protected Boolean doInBackground(final String... args) {
+            try {
+
+                UserController.getInstance().initialize(getApplicationContext());
+                UserController.getInstance().matchMake();
+                return true;
+            } catch (Exception e) {
+                Log.e("tag", "error", e);
+                return false;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(final Boolean success) {
+
+            if (dialog.isShowing()) {
+                dialog.dismiss();
+            }
+
+            // Setting data to list adapter
+            displayView(0);
         }
     }
 }
