@@ -12,6 +12,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,10 +34,21 @@ import info.androidhive.materialdesign.model.BookUserMapper;
 public class SearchResultAdapter extends RecyclerView.Adapter<SearchResultAdapter.ViewHolder> {
     // Provide a suitable constructor (depends on the kind of dataset)
     private List<BookUserMapper> mDataset;
+    private Context context;
+    private int lastPosition = -1;
+    public SearchResultAdapter(){
 
-    public SearchResultAdapter(List<BookUserMapper> myDataset) {
-        mDataset = myDataset;
     }
+
+    public SearchResultAdapter(List<BookUserMapper> myDataset,Context context) {
+        mDataset = myDataset;
+        this.context = context;
+    }
+
+    public void setData(List<BookUserMapper> mDataset) {
+        this.mDataset = mDataset;
+    }
+
     @Override
     public SearchResultAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
@@ -50,6 +63,13 @@ public class SearchResultAdapter extends RecyclerView.Adapter<SearchResultAdapte
         holder.bookTitle.setText(mDataset.get(position).getBookBorrow().getTitle());
         holder.distance.setText(mDataset.get(position).getDistance()+" km");
         holder.barterBookTitle.setText(mDataset.get(position).getBookLend().getTitle());
+        if(position >lastPosition) {
+
+            Animation animation = AnimationUtils.loadAnimation(context,
+                    R.anim.up_from_bottom);
+            holder.itemView.startAnimation(animation);
+            lastPosition = position;
+        }
     }
 
     @Override
