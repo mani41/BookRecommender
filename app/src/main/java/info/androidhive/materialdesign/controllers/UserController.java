@@ -92,4 +92,12 @@ public class UserController {
     public List<BookUserMapper> getMatchBookResults() {
         return matchBookResults;
     }
+
+    public UserModel getUser() {
+        if(user == null){
+            return new UserModel();
+        }
+        return user;
+    }
+
 }
