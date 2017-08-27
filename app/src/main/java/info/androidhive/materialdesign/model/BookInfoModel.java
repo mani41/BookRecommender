@@ -15,7 +15,7 @@ public class BookInfoModel {
     private List<String> authors;
     private String publishedDate;
     private String description;
-    private List<Map<String,String>> industryIdentifier;
+    private List<Map<String,String>> industryIdentifiers;
     private int pageCount;
     private float avgRatingGoogle;
     private int ratingCount;
@@ -28,6 +28,10 @@ public class BookInfoModel {
     public BookInfoModel() {
     }
 
+    public BookInfoModel(String id, String title){
+        this.id = id;
+        this.title = title;
+    }
     public BookInfoModel(String id, String title, String subtitle, List<String> authors, String publishedDate, String description, List<Map<String, String>> industryIdentifier, int pageCount, float avgRatingGoogle, int ratingCount, List<String> categories, List<Map<String, String>> imageLinks, String previewLink, Map<String, String> searchInfo) {
         this.id = id;
         this.title = title;
@@ -35,7 +39,7 @@ public class BookInfoModel {
         this.authors = authors;
         this.publishedDate = publishedDate;
         this.description = description;
-        this.industryIdentifier = industryIdentifier;
+        this.industryIdentifiers = industryIdentifier;
         this.pageCount = pageCount;
         this.avgRatingGoogle = avgRatingGoogle;
         this.ratingCount = ratingCount;
@@ -94,11 +98,11 @@ public class BookInfoModel {
     }
 
     public List<Map<String, String>> getIndustryIdentifier() {
-        return industryIdentifier;
+        return industryIdentifiers;
     }
 
     public void setIndustryIdentifier(List<Map<String, String>> industryIdentifier) {
-        this.industryIdentifier = industryIdentifier;
+        this.industryIdentifiers = industryIdentifier;
     }
 
     public int getPageCount() {

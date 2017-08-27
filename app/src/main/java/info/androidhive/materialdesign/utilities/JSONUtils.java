@@ -6,8 +6,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 
 import info.androidhive.materialdesign.R;
 
@@ -41,6 +43,25 @@ public class JSONUtils {
             return null;
         }
         return JSONString;
+    }
+
+    public static void writeToJson(Context context,int val,String jsonString){
+        Resources res = Resources.getSystem();
+        OutputStream outputStream = null;
+        try {
+            byte bytes[]= jsonString.getBytes();
+            String path = context.getPackageResourcePath();
+            String path2 = context.getPackageCodePath();
+            String appPath = context.getFilesDir().getAbsolutePath();
+            outputStream = context.openFileOutput("app/src/main/res/raw/bookinfo",Context.MODE_APPEND);
+            outputStream.write(bytes);
+            outputStream.flush();
+            outputStream.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }
