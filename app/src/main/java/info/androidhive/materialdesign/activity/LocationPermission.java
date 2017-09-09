@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import info.androidhive.materialdesign.R;
+import info.androidhive.materialdesign.utilities.AbsRuntimePermission;
 
 /**
- * Created by NgocTri on 7/4/2016.
+ * Created by Mani Shankar on 07/09/2017.
  */
+
 public class LocationPermission extends AbsRuntimePermission {
     private static final int REQUEST_PERMISSION = 10;
     @Override

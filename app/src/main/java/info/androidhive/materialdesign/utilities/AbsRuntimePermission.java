@@ -1,4 +1,4 @@
-package info.androidhive.materialdesign.activity;
+package info.androidhive.materialdesign.utilities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import android.util.SparseIntArray;
 import android.view.View;
 
 /**
- * Created by NgocTri on 7/4/2016.
+ * Created by Mani Shankar on 07/09/2017.
  */
 public abstract class AbsRuntimePermission extends Activity {
     private SparseIntArray mErrorString;

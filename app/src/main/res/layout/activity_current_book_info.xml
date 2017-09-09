@@ -1,10 +1,9 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
-    xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height = "match_parent" android:paddingLeft= "@dimen/activity_horizontal_margin"
-    android:paddingRight = "@dimen/activity_horizontal_margin"
-    android:paddingTop = "@dimen/activity_vertical_margin"
-    android:paddingBottom = "@dimen/activity_vertical_margin">
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height = "match_parent"
+    android:id="@+id/layoutR">
 
     <TextView
         android:text = ""
@@ -34,20 +33,20 @@
         android:textColorHighlight = "#ff7eff15"
         android:textColorHint = "#bd7e6b"
         android:layout_marginTop = "46dp"
-        android:layout_below = "@+id/imageView"
+        android:layout_below = "@+id/textview"
         android:layout_alignParentLeft = "true"
         android:layout_alignParentStart = "true"
         android:layout_alignParentRight = "true"
         android:layout_alignParentEnd = "true" />
 
 
-    <ImageView
+    <!--ImageView
         android:layout_width="240sp"
         android:layout_height="210sp"
         android:id="@+id/imageView"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp" /-->
 
     <EditText
         android:layout_width="wrap_content"
@@ -77,25 +76,34 @@
         android:textColorHint="#bd846b"
         android:hint="Book Author" />
 
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Done"
+    <!--Button
         android:id="@+id/doneB"
-        android:onClick="bookOwned"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/cancelB" />
-
-    <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cancel"
-        android:onClick="cancel"
-        android:id="@+id/cancelB"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/textview"
-        android:layout_toEndOf="@+id/textview" />
+        android:layout_alignParentEnd="true"
+        android:layout_toStartOf="@+id/textview"
+        android:backgroundTint="@color/colorAccent"
+        android:elevation="0dp"
+        android:onClick="login"
+        android:text="Done"
+        android:textSize="28dp"/-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button style="@style/PrimaryButton"
+            android:id="@+id/doneB"
+            android:layout_height="50dp"
+            android:text="DONE"
+            android:onClick="login"
+            android:textSize="20dp"
+            android:textScaleX="1.5"
+            android:enabled="true"
+            android:layout_width="fill_parent"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
 
 </RelativeLayout>

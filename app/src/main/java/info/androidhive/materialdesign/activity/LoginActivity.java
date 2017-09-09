@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                     phoneNumber.setError("phone number is required");
                 }
                 else if (authenticateLogin(v)) {
-                    Intent intent = new Intent(LoginActivity.this, LocationPermission.class);
+                    Intent intent = new Intent(LoginActivity.this, HomeBarter.class);
                     startActivity(intent);
                 }
             }
@@ -64,7 +64,6 @@ public class LoginActivity extends AppCompatActivity {
     private void setupVariables() {
         name = (EditText) findViewById(R.id.name);
         phoneNumber = (EditText) findViewById(R.id.phoneNum);
-
         Login = (Button) findViewById(R.id.loginB);
         deviceId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
     }

@@ -3,4 +3,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height = "match_parent">
+<!--Button
+    android:id="@+id/barterB"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_toStartOf="@+id/textview"
+    android:backgroundTint="@color/colorAccent"
+    android:elevation="0dp"
+    android:onClick="doneButton"
+    android:layout_weight="1"
+    android:text="Barter Now"
+    android:textSize="28dp" /-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button style="@style/PrimaryButton"
+            android:id="@+id/barterB"
+            android:layout_height="50dp"
+            android:text="BARTER NOW"
+            android:textSize="20dp"
+            android:onClick="doneButton"
+            android:textScaleX="1.5"
+            android:enabled="true"
+            android:layout_width="fill_parent"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
 </LinearLayout>

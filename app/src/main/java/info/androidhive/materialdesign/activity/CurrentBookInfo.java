@@ -1,22 +1,26 @@
 package info.androidhive.materialdesign.activity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import java.io.File;
 
 import info.androidhive.materialdesign.R;
 import info.androidhive.materialdesign.controllers.UserController;
-import info.androidhive.materialdesign.model.BookModel;
 import info.androidhive.materialdesign.utilities.ImageStorage;
-
+/**
+ * Created by Mani Shankar on 26-08-2017.
+ */
 public class CurrentBookInfo extends AppCompatActivity {
 
     private ImageView currentImage;
@@ -35,7 +39,7 @@ public class CurrentBookInfo extends AppCompatActivity {
         authorName = (EditText) findViewById(R.id.bookAuthorId);
 
         UserController userController = UserController.getInstance();
-        BookModel bModel = new BookModel(bookName.toString(), "dfgdf", "");
+       // BookModel bModel = new BookModel(bookName.toString(), "dfgdf", "");
 
 
         String imageDirectory = ImageStorage.getImageDirectory();
@@ -43,8 +47,10 @@ public class CurrentBookInfo extends AppCompatActivity {
 
         if (imgFile.exists()) {
             Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-            ImageView myImage = (ImageView) findViewById(R.id.imageView);
-            myImage.setImageBitmap(myBitmap);
+            Resources res=getResources();
+            BitmapDrawable bitmapDrawable=new BitmapDrawable(res, myBitmap);
+            RelativeLayout relativeLayout=(RelativeLayout)findViewById(R.id.layoutR);
+            relativeLayout.setBackground(bitmapDrawable);
         }
 
         doneB = (Button) findViewById(R.id.doneB);
